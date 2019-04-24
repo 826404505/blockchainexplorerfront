@@ -5,10 +5,10 @@ var app = new Vue({
     },
     // 页面渲染完之后，自动执行mounted函数
     computed: {
-        showRecentBlocks() {
+        showRecentBlocks(){
             var now = Date.now();
             this.recentBlocks.forEach(block => {
-                block.showtime = parseInt((now - block.time) / 1000 / 60);
+                block.showtime = parseInt((now - block.time)/1000/60);
                 block.showSizeOnDisk = block.sizeOnDisk.toLocaleString('en');
             });
             return this.recentBlocks;
@@ -16,7 +16,7 @@ var app = new Vue({
     },
     mounted() {
         console.log('view mounted');
-
+        this.getBlockRecent();
     },
     methods: {
         getBlockRecent() {

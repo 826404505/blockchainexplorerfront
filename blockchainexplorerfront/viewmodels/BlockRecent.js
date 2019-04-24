@@ -25,7 +25,6 @@ var app = new Vue({
                     // handle success
                     console.log(response);
                     app.recentBlocks = response.data;
-
                 })
                 .catch(function (error) {
                     // handle error

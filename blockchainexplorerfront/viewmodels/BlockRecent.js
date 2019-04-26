@@ -1,7 +1,8 @@
 var app = new Vue({
     el: '#app',
     data: {
-        recentBlocks: []
+        recentBlocks: [],
+        keyword:''
     },
     // 页面渲染完之后，自动执行mounted函数
     computed: {
@@ -32,8 +33,9 @@ var app = new Vue({
                     console.log(error);
                 });
         },
-        handleClick(val) {
-            console.log(val);
+        handleClick(block) {
+            console.log(block);
+            location.href = "BlockDetail.html?blockhash=" + block.blockhash;
         },
         //根据keyword查询block
         handleSearch(keyword){

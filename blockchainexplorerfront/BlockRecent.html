@@ -15,9 +15,11 @@
         <el-button type="primary" @click="handleSearch">搜索</el-button>
         <el-table :data="showRecentBlocks">
             <el-table-column label="高度">
+                <!-- <el-button type="primary" @click="handleClick(scope)">{{scope.row.height}}</el-button> -->
                 <template slot-scope="scope">
-                    <!-- <el-button type="primary" @click="handleClick(scope)">{{scope.row.height}}</el-button> -->
-                    <a :href="'http://www.baidu.com/' + scope.row.height">{{scope.row.height}}</a>
+                    <!-- <el-button type="primary" @click="handleClick(scope)">{{scope.row.height}}</el-button> 
+                    <a :href="'http://localhost:5000/BlockDetail?blockhash=' + scope.row.blockhash">{{scope.row.height}}</a>-->
+                    <el-button type="primary" @click="handleClick(scope.row)">{{scope.row.height}}</el-button>
                 </template>
             </el-table-column>
             <el-table-column prop="showtime" label="时间">

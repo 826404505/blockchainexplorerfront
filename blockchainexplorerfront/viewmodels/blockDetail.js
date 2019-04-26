@@ -7,8 +7,9 @@ var app = new Vue({
     mounted() {
         console.log('view mounted');
         var url = new URL(location.href);
-        var height = url.searchParams.get("height");
-        console.log("height"+height);
+        //var height = url.searchParams.get("height");
+        //console.log("height"+height);
+        console.log(url);
         //this.getBlock();
     },
 	methods: {

@@ -11,8 +11,8 @@
 
 <body>
     <div id="app">
-        <el-input v-model="input" placeholder="请输入内容"></el-input>
-        <el-button type="primary" v-model="keyword" @click="handleSearch">搜索</el-button>
+        <el-input v-model="keyword" placeholder="请输入内容"></el-input>
+        <el-button type="primary" @click="handleSearch">搜索</el-button>
         <el-table :data="showRecentBlocks">
             <el-table-column label="高度">
                 <template slot-scope="scope">

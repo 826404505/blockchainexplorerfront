@@ -35,7 +35,7 @@ var app = new Vue({
         },
         handleClick(block) {
             console.log(block);
-            location.href = "BlockDetail.html?blockhash=" + block.blockhash;
+            location.href = "BlockDetail.html?height=" + block.height;
         },
         //根据keyword查询block
         handleSearch(keyword){

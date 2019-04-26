@@ -1,16 +1,15 @@
 var app = new Vue({
     el: '#app',
     data: {
-        blockDetail:'',
-        blockhash:''
+        blockDetail:''
     },
 	// 页面渲染完之后，自动执行mounted函数
     mounted() {
         console.log('view mounted');
         var url = new URL(location.href);
-        this.blockhash = url.searchParams.get("blockhash");
-        console.log("blockhash"+blockhash);
-        this.getBlock();
+        var height = url.searchParams.get("height");
+        console.log("height"+height);
+        //this.getBlock();
     },
 	methods: {
         //根据blockhash得到blockdetail

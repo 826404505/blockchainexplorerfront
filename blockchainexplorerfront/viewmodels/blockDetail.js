@@ -7,17 +7,17 @@ var app = new Vue({
     mounted() {
         console.log('view mounted');
         var url = new URL(location.href);
-        //var height = url.searchParams.get("height");
-        //console.log("height"+height);
+        this.height = url.searchParams.get("height");
+        console.log("height"+height);
         console.log(url);
         //this.getBlock();
     },
 	methods: {
         //根据blockhash得到blockdetail
         getBlock(blockhash) {
-            axios.get('http://localhost:8080/block/getBlockDetailByHash', {
+            axios.get('http://localhost:8080/block/getBlockDetailByHeight', {
                 params: {
-                    blockhash: this.blockhash
+                    height: this.height
                 }
             })
                 .then(function (response) {

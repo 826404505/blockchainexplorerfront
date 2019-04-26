@@ -9,7 +9,7 @@ var app = new Vue({
     mounted() {
         console.log('view mounted');
         var url = new URL(location.href);
-        this.height = url.searchParams.get("height");
+        //this.height = url.searchParams.get("height");
         this.blockhash = url.searchParams.get("blockhash");
         console.log("height"+height);
         console.log(url);

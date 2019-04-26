@@ -2,7 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         blockDetail:'',
-        height:''
+        height:'',
+        blockhash:''
     },
 	// 页面渲染完之后，自动执行mounted函数
     mounted() {
